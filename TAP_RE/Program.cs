@@ -595,11 +595,15 @@ namespace BlaconzOS
                     string onereact = (Console.ReadLine());
                     if (onereact == "Write" || onereact == "write")
                     {
+                        string fileNameOne = @"C:\Users\XboxZ\source\repos\TAP_RE\TAP_RE\bin\Debug\SaveNotes1.txt";
+                    if (File.Exists("SaveNotes1"))
+                    {
                         Console.WriteLine("\n:Writing terminal:");
                         string oneres = (Console.ReadLine());
                         TextWriter Nsave = new StreamWriter("SaveNotes1.txt");
                         Nsave.WriteLine(oneres);
                         Nsave.Close();
+                    }
                     }
                     if (onereact == "Read" || onereact == "read")
                     {
@@ -607,6 +611,7 @@ namespace BlaconzOS
                         string ReadNoteOne = Nread.ReadLine();
                         Console.WriteLine(ReadNoteOne);
                         Nread.Close();
+                    NotePort();
                     }
                 }
                 if (Notesel == "2")
