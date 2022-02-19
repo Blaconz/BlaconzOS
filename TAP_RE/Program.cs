@@ -553,13 +553,12 @@ namespace BlaconzOS
         {
             Console.ResetColor();
             Console.ForegroundColor = ConsoleColor.DarkMagenta;
-            Console.WriteLine("Enter \"Help\" for TPI Assistance");
-                Console.WriteLine("\nVirtual TPI: 1");
+            Console.WriteLine("Enter \"Help\" for TPI Assistance\nVirtual TPI: 1");
             Thread.Sleep(250);
             Console.WriteLine("Allocated 20kb\n");
             Console.ResetColor();
             Console.Write("vTPI.1 >");
-            String ResponseDir = (Console.ReadLine());
+            string ResponseDir = (Console.ReadLine());
             if (ResponseDir == "Help")
             {
                 Console.WriteLine("");
