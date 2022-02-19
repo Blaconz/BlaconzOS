@@ -679,7 +679,7 @@ namespace BlaconzOS
                     Nread.Close();
                     NotePort();
                 }
-            }
+                }
                 if (Notesel == "3")
                 {
                 Console.WriteLine("\n'Read' saved or 'Write' new");
@@ -725,7 +725,7 @@ namespace BlaconzOS
                     Nread.Close();
                     NotePort();
                 }
-            }
+                }
                 if (Notesel == "4")
                 {
                 Console.WriteLine("\n'Read' saved or 'Write' new");
@@ -771,7 +771,7 @@ namespace BlaconzOS
                     Nread.Close();
                     NotePort();
                 }
-            }
+                }
                 if (Notesel == "5")
                 {
                 Console.WriteLine("\n'Read' saved or 'Write' new");
@@ -817,7 +817,7 @@ namespace BlaconzOS
                     Nread.Close();
                     NotePort();
                 }
-            }
+                }
                 if (Notesel == "6")
                 {
                 Console.WriteLine("\n'Read' saved or 'Write' new");
@@ -863,7 +863,7 @@ namespace BlaconzOS
                     Nread.Close();
                     NotePort();
                 }
-            }
+                }
                 if (Notesel == "7")
                 {
                 Console.WriteLine("\n'Read' saved or 'Write' new");
@@ -909,7 +909,7 @@ namespace BlaconzOS
                     Nread.Close();
                     NotePort();
                 }
-            }
+                }
                 if (Notesel == "8")
                 {
                 Console.WriteLine("\n'Read' saved or 'Write' new");
@@ -955,7 +955,7 @@ namespace BlaconzOS
                     Nread.Close();
                     NotePort();
                 }
-            }
+                }
                 if (Notesel == "9")
                 {
                 Console.WriteLine("\n'Read' saved or 'Write' new");
@@ -1001,7 +1001,7 @@ namespace BlaconzOS
                     Nread.Close();
                     NotePort();
                 }
-            }
+                }
                 if (Notesel == "10")
                 {
                 Console.WriteLine("\n'Read' saved or 'Write' new");
@@ -1047,7 +1047,7 @@ namespace BlaconzOS
                     Nread.Close();
                     NotePort();
                 }
-            };
+                };
         }
         public static void NotePort()
         {
