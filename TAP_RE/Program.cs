@@ -596,14 +596,14 @@ namespace BlaconzOS
                 string onereact = (Console.ReadLine());
                     if (onereact == "Write" || onereact == "write")
                     {
-                        string fileNameOne = @"C:\Users\XboxZ\source\repos\TAP_RE\TAP_RE\bin\Debug\SaveNotes1.txt";
+                        
                     if (File.Exists(@"SaveNotes1.txt"))
                     {
                         Console.ForegroundColor = ConsoleColor.Red;
                         Console.WriteLine("\nSaved file already present; Do you want to re-write the current save? (Y) || (N)");
                         Console.ResetColor();
                         Console.Write(".Notes >");
-                        string Fileexist = (Console.ReadLine());
+                        string Fileexist = Console.ReadLine();
                         if (Fileexist == "Y" || Fileexist == "y")
                         {
                             Console.WriteLine(Figgle.FiggleFonts.KeyboardSmall.Render("\nNote Pad:"));
@@ -637,40 +637,418 @@ namespace BlaconzOS
                 }
                 if (Notesel == "2")
                 {
-                    TextWriter Nsave = new StreamWriter("SaveNotes2.txt");
+                Console.WriteLine("\n'Read' saved or 'Write' new");
+                Console.Write(".Notes >");
+                string onereact = (Console.ReadLine());
+                if (onereact == "Write" || onereact == "write")
+                {
+
+                    if (File.Exists(@"SaveNotes2.txt"))
+                    {
+                        Console.ForegroundColor = ConsoleColor.Red;
+                        Console.WriteLine("\nSaved file already present; Do you want to re-write the current save? (Y) || (N)");
+                        Console.ResetColor();
+                        Console.Write(".Notes >");
+                        string Fileexist = Console.ReadLine();
+                        if (Fileexist == "Y" || Fileexist == "y")
+                        {
+                            Console.WriteLine(Figgle.FiggleFonts.KeyboardSmall.Render("\nNote Pad:"));
+                            string oneres = (Console.ReadLine());
+                            TextWriter Nsave = new StreamWriter("SaveNotes2.txt");
+                            Nsave.WriteLine(oneres);
+                            Nsave.Close();
+                        }
+                        if (Fileexist == "N" || Fileexist == "n")
+                        {
+                            NotesSpace();
+                        }
+                    }
+                    else
+                    {
+                        Console.WriteLine(Figgle.FiggleFonts.KeyboardSmall.Render("\nNote Pad:"));
+                        string oneres = (Console.ReadLine());
+                        TextWriter Nsave = new StreamWriter("SaveNotes2.txt");
+                        Nsave.WriteLine(oneres);
+                        Nsave.Close();
+                    }
                 }
+                if (onereact == "Read" || onereact == "read")
+                {
+                    TextReader Nread = new StreamReader("SaveNotes2.txt");
+                    string ReadNoteOne = Nread.ReadLine();
+                    Console.WriteLine(ReadNoteOne);
+                    Nread.Close();
+                    NotePort();
+                }
+            }
                 if (Notesel == "3")
                 {
-                    TextWriter Nsave = new StreamWriter("SaveNotes3.txt");
+                Console.WriteLine("\n'Read' saved or 'Write' new");
+                Console.Write(".Notes >");
+                string onereact = (Console.ReadLine());
+                if (onereact == "Write" || onereact == "write")
+                {
+
+                    if (File.Exists(@"SaveNotes3.txt"))
+                    {
+                        Console.ForegroundColor = ConsoleColor.Red;
+                        Console.WriteLine("\nSaved file already present; Do you want to re-write the current save? (Y) || (N)");
+                        Console.ResetColor();
+                        Console.Write(".Notes >");
+                        string Fileexist = Console.ReadLine();
+                        if (Fileexist == "Y" || Fileexist == "y")
+                        {
+                            Console.WriteLine(Figgle.FiggleFonts.KeyboardSmall.Render("\nNote Pad:"));
+                            string oneres = (Console.ReadLine());
+                            TextWriter Nsave = new StreamWriter("SaveNotes3.txt");
+                            Nsave.WriteLine(oneres);
+                            Nsave.Close();
+                        }
+                        if (Fileexist == "N" || Fileexist == "n")
+                        {
+                            NotesSpace();
+                        }
+                    }
+                    else
+                    {
+                        Console.WriteLine(Figgle.FiggleFonts.KeyboardSmall.Render("\nNote Pad:"));
+                        string oneres = (Console.ReadLine());
+                        TextWriter Nsave = new StreamWriter("SaveNotes3.txt");
+                        Nsave.WriteLine(oneres);
+                        Nsave.Close();
+                    }
                 }
+                if (onereact == "Read" || onereact == "read")
+                {
+                    TextReader Nread = new StreamReader("SaveNotes3.txt");
+                    string ReadNoteOne = Nread.ReadLine();
+                    Console.WriteLine(ReadNoteOne);
+                    Nread.Close();
+                    NotePort();
+                }
+            }
                 if (Notesel == "4")
                 {
-                    TextWriter Nsave = new StreamWriter("SaveNotes4.txt");
+                Console.WriteLine("\n'Read' saved or 'Write' new");
+                Console.Write(".Notes >");
+                string onereact = (Console.ReadLine());
+                if (onereact == "Write" || onereact == "write")
+                {
+
+                    if (File.Exists(@"SaveNotes4.txt"))
+                    {
+                        Console.ForegroundColor = ConsoleColor.Red;
+                        Console.WriteLine("\nSaved file already present; Do you want to re-write the current save? (Y) || (N)");
+                        Console.ResetColor();
+                        Console.Write(".Notes >");
+                        string Fileexist = Console.ReadLine();
+                        if (Fileexist == "Y" || Fileexist == "y")
+                        {
+                            Console.WriteLine(Figgle.FiggleFonts.KeyboardSmall.Render("\nNote Pad:"));
+                            string oneres = (Console.ReadLine());
+                            TextWriter Nsave = new StreamWriter("SaveNotes4.txt");
+                            Nsave.WriteLine(oneres);
+                            Nsave.Close();
+                        }
+                        if (Fileexist == "N" || Fileexist == "n")
+                        {
+                            NotesSpace();
+                        }
+                    }
+                    else
+                    {
+                        Console.WriteLine(Figgle.FiggleFonts.KeyboardSmall.Render("\nNote Pad:"));
+                        string oneres = (Console.ReadLine());
+                        TextWriter Nsave = new StreamWriter("SaveNotes4.txt");
+                        Nsave.WriteLine(oneres);
+                        Nsave.Close();
+                    }
                 }
+                if (onereact == "Read" || onereact == "read")
+                {
+                    TextReader Nread = new StreamReader("SaveNotes4.txt");
+                    string ReadNoteOne = Nread.ReadLine();
+                    Console.WriteLine(ReadNoteOne);
+                    Nread.Close();
+                    NotePort();
+                }
+            }
                 if (Notesel == "5")
                 {
-                    TextWriter Nsave = new StreamWriter("SaveNotes5.txt");
+                Console.WriteLine("\n'Read' saved or 'Write' new");
+                Console.Write(".Notes >");
+                string onereact = (Console.ReadLine());
+                if (onereact == "Write" || onereact == "write")
+                {
+
+                    if (File.Exists(@"SaveNotes5.txt"))
+                    {
+                        Console.ForegroundColor = ConsoleColor.Red;
+                        Console.WriteLine("\nSaved file already present; Do you want to re-write the current save? (Y) || (N)");
+                        Console.ResetColor();
+                        Console.Write(".Notes >");
+                        string Fileexist = Console.ReadLine();
+                        if (Fileexist == "Y" || Fileexist == "y")
+                        {
+                            Console.WriteLine(Figgle.FiggleFonts.KeyboardSmall.Render("\nNote Pad:"));
+                            string oneres = (Console.ReadLine());
+                            TextWriter Nsave = new StreamWriter("SaveNotes5.txt");
+                            Nsave.WriteLine(oneres);
+                            Nsave.Close();
+                        }
+                        if (Fileexist == "N" || Fileexist == "n")
+                        {
+                            NotesSpace();
+                        }
+                    }
+                    else
+                    {
+                        Console.WriteLine(Figgle.FiggleFonts.KeyboardSmall.Render("\nNote Pad:"));
+                        string oneres = (Console.ReadLine());
+                        TextWriter Nsave = new StreamWriter("SaveNotes5.txt");
+                        Nsave.WriteLine(oneres);
+                        Nsave.Close();
+                    }
                 }
+                if (onereact == "Read" || onereact == "read")
+                {
+                    TextReader Nread = new StreamReader("SaveNotes5.txt");
+                    string ReadNoteOne = Nread.ReadLine();
+                    Console.WriteLine(ReadNoteOne);
+                    Nread.Close();
+                    NotePort();
+                }
+            }
                 if (Notesel == "6")
                 {
-                    TextWriter Nsave = new StreamWriter("SaveNotes6.txt");
+                Console.WriteLine("\n'Read' saved or 'Write' new");
+                Console.Write(".Notes >");
+                string onereact = (Console.ReadLine());
+                if (onereact == "Write" || onereact == "write")
+                {
+
+                    if (File.Exists(@"SaveNotes6.txt"))
+                    {
+                        Console.ForegroundColor = ConsoleColor.Red;
+                        Console.WriteLine("\nSaved file already present; Do you want to re-write the current save? (Y) || (N)");
+                        Console.ResetColor();
+                        Console.Write(".Notes >");
+                        string Fileexist = Console.ReadLine();
+                        if (Fileexist == "Y" || Fileexist == "y")
+                        {
+                            Console.WriteLine(Figgle.FiggleFonts.KeyboardSmall.Render("\nNote Pad:"));
+                            string oneres = (Console.ReadLine());
+                            TextWriter Nsave = new StreamWriter("SaveNotes6.txt");
+                            Nsave.WriteLine(oneres);
+                            Nsave.Close();
+                        }
+                        if (Fileexist == "N" || Fileexist == "n")
+                        {
+                            NotesSpace();
+                        }
+                    }
+                    else
+                    {
+                        Console.WriteLine(Figgle.FiggleFonts.KeyboardSmall.Render("\nNote Pad:"));
+                        string oneres = (Console.ReadLine());
+                        TextWriter Nsave = new StreamWriter("SaveNotes6.txt");
+                        Nsave.WriteLine(oneres);
+                        Nsave.Close();
+                    }
                 }
+                if (onereact == "Read" || onereact == "read")
+                {
+                    TextReader Nread = new StreamReader("SaveNotes6.txt");
+                    string ReadNoteOne = Nread.ReadLine();
+                    Console.WriteLine(ReadNoteOne);
+                    Nread.Close();
+                    NotePort();
+                }
+            }
                 if (Notesel == "7")
                 {
-                    TextWriter Nsave = new StreamWriter("SaveNotes7.txt");
+                Console.WriteLine("\n'Read' saved or 'Write' new");
+                Console.Write(".Notes >");
+                string onereact = (Console.ReadLine());
+                if (onereact == "Write" || onereact == "write")
+                {
+
+                    if (File.Exists(@"SaveNotes7.txt"))
+                    {
+                        Console.ForegroundColor = ConsoleColor.Red;
+                        Console.WriteLine("\nSaved file already present; Do you want to re-write the current save? (Y) || (N)");
+                        Console.ResetColor();
+                        Console.Write(".Notes >");
+                        string Fileexist = Console.ReadLine();
+                        if (Fileexist == "Y" || Fileexist == "y")
+                        {
+                            Console.WriteLine(Figgle.FiggleFonts.KeyboardSmall.Render("\nNote Pad:"));
+                            string oneres = (Console.ReadLine());
+                            TextWriter Nsave = new StreamWriter("SaveNotes7.txt");
+                            Nsave.WriteLine(oneres);
+                            Nsave.Close();
+                        }
+                        if (Fileexist == "N" || Fileexist == "n")
+                        {
+                            NotesSpace();
+                        }
+                    }
+                    else
+                    {
+                        Console.WriteLine(Figgle.FiggleFonts.KeyboardSmall.Render("\nNote Pad:"));
+                        string oneres = (Console.ReadLine());
+                        TextWriter Nsave = new StreamWriter("SaveNotes7.txt");
+                        Nsave.WriteLine(oneres);
+                        Nsave.Close();
+                    }
                 }
+                if (onereact == "Read" || onereact == "read")
+                {
+                    TextReader Nread = new StreamReader("SaveNotes7.txt");
+                    string ReadNoteOne = Nread.ReadLine();
+                    Console.WriteLine(ReadNoteOne);
+                    Nread.Close();
+                    NotePort();
+                }
+            }
                 if (Notesel == "8")
                 {
-                    TextWriter Nsave = new StreamWriter("SaveNotes8.txt");
+                Console.WriteLine("\n'Read' saved or 'Write' new");
+                Console.Write(".Notes >");
+                string onereact = (Console.ReadLine());
+                if (onereact == "Write" || onereact == "write")
+                {
+
+                    if (File.Exists(@"SaveNotes8.txt"))
+                    {
+                        Console.ForegroundColor = ConsoleColor.Red;
+                        Console.WriteLine("\nSaved file already present; Do you want to re-write the current save? (Y) || (N)");
+                        Console.ResetColor();
+                        Console.Write(".Notes >");
+                        string Fileexist = Console.ReadLine();
+                        if (Fileexist == "Y" || Fileexist == "y")
+                        {
+                            Console.WriteLine(Figgle.FiggleFonts.KeyboardSmall.Render("\nNote Pad:"));
+                            string oneres = (Console.ReadLine());
+                            TextWriter Nsave = new StreamWriter("SaveNotes8.txt");
+                            Nsave.WriteLine(oneres);
+                            Nsave.Close();
+                        }
+                        if (Fileexist == "N" || Fileexist == "n")
+                        {
+                            NotesSpace();
+                        }
+                    }
+                    else
+                    {
+                        Console.WriteLine(Figgle.FiggleFonts.KeyboardSmall.Render("\nNote Pad:"));
+                        string oneres = (Console.ReadLine());
+                        TextWriter Nsave = new StreamWriter("SaveNotes8.txt");
+                        Nsave.WriteLine(oneres);
+                        Nsave.Close();
+                    }
                 }
+                if (onereact == "Read" || onereact == "read")
+                {
+                    TextReader Nread = new StreamReader("SaveNotes8.txt");
+                    string ReadNoteOne = Nread.ReadLine();
+                    Console.WriteLine(ReadNoteOne);
+                    Nread.Close();
+                    NotePort();
+                }
+            }
                 if (Notesel == "9")
                 {
-                    TextWriter Nsave = new StreamWriter("SaveNotes9.txt");
+                Console.WriteLine("\n'Read' saved or 'Write' new");
+                Console.Write(".Notes >");
+                string onereact = (Console.ReadLine());
+                if (onereact == "Write" || onereact == "write")
+                {
+
+                    if (File.Exists(@"SaveNotes9.txt"))
+                    {
+                        Console.ForegroundColor = ConsoleColor.Red;
+                        Console.WriteLine("\nSaved file already present; Do you want to re-write the current save? (Y) || (N)");
+                        Console.ResetColor();
+                        Console.Write(".Notes >");
+                        string Fileexist = Console.ReadLine();
+                        if (Fileexist == "Y" || Fileexist == "y")
+                        {
+                            Console.WriteLine(Figgle.FiggleFonts.KeyboardSmall.Render("\nNote Pad:"));
+                            string oneres = (Console.ReadLine());
+                            TextWriter Nsave = new StreamWriter("SaveNotes9.txt");
+                            Nsave.WriteLine(oneres);
+                            Nsave.Close();
+                        }
+                        if (Fileexist == "N" || Fileexist == "n")
+                        {
+                            NotesSpace();
+                        }
+                    }
+                    else
+                    {
+                        Console.WriteLine(Figgle.FiggleFonts.KeyboardSmall.Render("\nNote Pad:"));
+                        string oneres = (Console.ReadLine());
+                        TextWriter Nsave = new StreamWriter("SaveNotes9.txt");
+                        Nsave.WriteLine(oneres);
+                        Nsave.Close();
+                    }
                 }
+                if (onereact == "Read" || onereact == "read")
+                {
+                    TextReader Nread = new StreamReader("SaveNotes9.txt");
+                    string ReadNoteOne = Nread.ReadLine();
+                    Console.WriteLine(ReadNoteOne);
+                    Nread.Close();
+                    NotePort();
+                }
+            }
                 if (Notesel == "10")
                 {
-                    TextWriter Nsave = new StreamWriter("SaveNotes10.txt");
-                };
+                Console.WriteLine("\n'Read' saved or 'Write' new");
+                Console.Write(".Notes >");
+                string onereact = (Console.ReadLine());
+                if (onereact == "Write" || onereact == "write")
+                {
+
+                    if (File.Exists(@"SaveNotes10.txt"))
+                    {
+                        Console.ForegroundColor = ConsoleColor.Red;
+                        Console.WriteLine("\nSaved file already present; Do you want to re-write the current save? (Y) || (N)");
+                        Console.ResetColor();
+                        Console.Write(".Notes >");
+                        string Fileexist = Console.ReadLine();
+                        if (Fileexist == "Y" || Fileexist == "y")
+                        {
+                            Console.WriteLine(Figgle.FiggleFonts.KeyboardSmall.Render("\nNote Pad:"));
+                            string oneres = (Console.ReadLine());
+                            TextWriter Nsave = new StreamWriter("SaveNotes10.txt");
+                            Nsave.WriteLine(oneres);
+                            Nsave.Close();
+                        }
+                        if (Fileexist == "N" || Fileexist == "n")
+                        {
+                            NotesSpace();
+                        }
+                    }
+                    else
+                    {
+                        Console.WriteLine(Figgle.FiggleFonts.KeyboardSmall.Render("\nNote Pad:"));
+                        string oneres = (Console.ReadLine());
+                        TextWriter Nsave = new StreamWriter("SaveNotes10.txt");
+                        Nsave.WriteLine(oneres);
+                        Nsave.Close();
+                    }
+                }
+                if (onereact == "Read" || onereact == "read")
+                {
+                    TextReader Nread = new StreamReader("SaveNotes10.txt");
+                    string ReadNoteOne = Nread.ReadLine();
+                    Console.WriteLine(ReadNoteOne);
+                    Nread.Close();
+                    NotePort();
+                }
+            };
         }
         public static void NotePort()
         {
