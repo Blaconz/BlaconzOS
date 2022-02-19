@@ -554,11 +554,11 @@ namespace BlaconzOS
             Console.ResetColor();
             Console.ForegroundColor = ConsoleColor.DarkMagenta;
             Console.WriteLine("Enter \"Help\" for TPI Assistance");
-                Console.WriteLine("\nVirtual drive: 1");
+                Console.WriteLine("\nVirtual TPI: 1");
             Thread.Sleep(250);
             Console.WriteLine("Allocated 20kb\n");
             Console.ResetColor();
-            Console.Write("vdir.1 >");
+            Console.Write("vTPI.1 >");
             String ResponseDir = (Console.ReadLine());
             if (ResponseDir == "Help")
             {
@@ -592,13 +592,34 @@ namespace BlaconzOS
                 if (Notesel == "1")
                 {
                     Console.WriteLine("\n'Read' saved or 'Write' new");
-                    string onereact = (Console.ReadLine());
+                Console.Write(".Notes >");
+                string onereact = (Console.ReadLine());
                     if (onereact == "Write" || onereact == "write")
                     {
                         string fileNameOne = @"C:\Users\XboxZ\source\repos\TAP_RE\TAP_RE\bin\Debug\SaveNotes1.txt";
-                    if (File.Exists("SaveNotes1"))
+                    if (File.Exists(@"SaveNotes1.txt"))
                     {
-                        Console.WriteLine("\n:Writing terminal:");
+                        Console.ForegroundColor = ConsoleColor.Red;
+                        Console.WriteLine("\nSaved file already present; Do you want to re-write the current save? (Y) || (N)");
+                        Console.ResetColor();
+                        Console.Write(".Notes >");
+                        string Fileexist = (Console.ReadLine());
+                        if (Fileexist == "Y" || Fileexist == "y")
+                        {
+                            Console.WriteLine(Figgle.FiggleFonts.KeyboardSmall.Render("\nNote Pad:"));
+                            string oneres = (Console.ReadLine());
+                            TextWriter Nsave = new StreamWriter("SaveNotes1.txt");
+                            Nsave.WriteLine(oneres);
+                            Nsave.Close();
+                        }
+                        if (Fileexist == "N" || Fileexist == "n")
+                        {
+                            NotesSpace();
+                        }
+                    }
+                    else
+                    {
+                        Console.WriteLine(Figgle.FiggleFonts.KeyboardSmall.Render("\nNote Pad:"));
                         string oneres = (Console.ReadLine());
                         TextWriter Nsave = new StreamWriter("SaveNotes1.txt");
                         Nsave.WriteLine(oneres);
